@@ -33,6 +33,8 @@ public class Incident {
 	@JsonIgnore
 	private IncidentType incidentType;
 	
+	private String description;
+	
 	
 	
 
