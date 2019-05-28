@@ -30,6 +30,19 @@ public class Incident {
 	private String description;
 	
 	private String status;
+	public Incident() {
+	}
+	
+
+	public Incident(Long id, Long ownerId, String incidentType, String description, String status) {
+		super();
+		this.id = id;
+		this.ownerId = ownerId;
+		this.incidentType = incidentType;
+		this.description = description;
+		this.status = status;
+	}
+
 
 	public Long getId() {
 		return id;
