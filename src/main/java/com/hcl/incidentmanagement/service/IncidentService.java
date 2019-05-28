@@ -9,4 +9,7 @@ public interface IncidentService {
 	
 	public List<Incident> getIncidentsByinccidentTypeId(String identTypeId);
 
+        public Incident search(Long id);
+	public String status(Long id,String status);
+
 }

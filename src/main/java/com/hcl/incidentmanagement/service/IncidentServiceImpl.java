@@ -38,4 +38,19 @@ public class IncidentServiceImpl implements IncidentService {
 		return incidentRepository.findByIncidentType(incidentType);
 	}
 
+@Override
+	public Incident search(Long id) {
+	
+		return incidentRepository.findById(id).get();
+	}
+
+	@Override
+	public String status(Long id, String status) {
+		
+	Incident incident= incidentRepository.findById(id).get();
+	 incident.setStatus(status);
+	 incidentRepository.save(incident);
+	 
+		return "Status "+incident.getStatus();
+	}
 }

@@ -23,10 +23,23 @@ public class IncidentController {
 		return incidentService.createIncident(incident);
 	}
 	
-	@GetMapping("/getincident/{}")
+	@GetMapping("/getincident/{incidentType}")
 	public List<Incident> getIncidentBy(@RequestParam String incidentType) {
 
 		return incidentService.getIncidentsByinccidentTypeId(incidentType);
+	}
+
+@GetMapping("/search/{id}")
+	public Incident searchIncident(@PathVariable("id") Long inctId)
+	{	
+		return incidentService.search(inctId);
+	}
+	
+	@PostMapping("/status")
+	public String status(@RequestBody Incident inctId)
+	{	
+		
+		return incidentService.status(inctId.getId(), inctId.getStatus());
 	}
 
 
