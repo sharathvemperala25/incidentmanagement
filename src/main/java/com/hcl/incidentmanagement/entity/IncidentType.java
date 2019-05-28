@@ -27,8 +27,26 @@ public class IncidentType {
 	private Long id;
 	private String IncidentType;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy="owner")
-	@JsonIgnore
-	private List<Incident> incidents;
+	
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getIncidentType() {
+		return IncidentType;
+	}
+
+	public void setIncidentType(String incidentType) {
+		IncidentType = incidentType;
+	}
+
+
+	
+	
 
 }

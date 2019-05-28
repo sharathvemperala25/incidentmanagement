@@ -23,17 +23,64 @@ public class Incident {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="Incident_ownerid")
-	@JsonIgnore
-	private User owner;
-	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="Incident_Type")
-	@JsonIgnore
-	private IncidentType incidentType;
+		private Long ownerId;
+																																																																																																																																																																																																																																									
+	private String incidentType;
 	
 	private String description;
+	
+	private String status;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+
+
+
+	public Long getOwnerId() {
+		return ownerId;
+	}
+
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+	}
+
+	public String getIncidentType() {
+		return incidentType;
+	}
+
+	public void setIncidentType(String incidentType) {
+		this.incidentType = incidentType;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
