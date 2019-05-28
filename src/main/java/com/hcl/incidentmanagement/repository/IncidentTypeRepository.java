@@ -7,5 +7,7 @@ import com.hcl.incidentmanagement.entity.IncidentType;
 
 @Repository
 public interface IncidentTypeRepository  extends JpaRepository<IncidentType,Long> {
+	
+
 
 }
